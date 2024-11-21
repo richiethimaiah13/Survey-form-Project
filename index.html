@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Form</title>
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -13,30 +12,47 @@
     <form id="survey-form">
 
       <fieldset>
-        <label id="name-label">Name <input type="text" id="name" placeholder="Enter your Name"></label>
+        <label id="name-label">Name <input type="text" id="name" placeholder="Enter your Name" required></label>
         <label id="email-label">Email <input type="email" id="email" required placeholder="Enter your Email"></label>
         <label id="number-label">Age <input type="number" id="number" min="10" max="30" placeholder="Age"></label>
       </fieldset>
       
       <fieldset>
-        <label>Which option best describes your skill level:
+        <label for="dropdown">Which option best describes your skill level:
           <select id="dropdown">
             <option value="">Select one</option>
             <option value="1">Beginner</option>
             <option value="2">Intermediate</option>
             <option value="3">Advanced</option>
+          </select>
         </label>
       </fieldset>
       
       <fieldset>
         <legend>What postion do you usually play?</legend>
-        <label><input name="position" type="radio" checked> Goalkeeper</label>
-        <label><input name="position" type="radio"> Forward</label>
-        <label><input name="position" type="radio"> Midfielder</label>
-        <label><input name="position" type="radio"> Defender</label>
-        <label><input name="position" type="radio"> Not Sure Yet</label>
+        <label><input class="inline" name="position" value="goalkeeper" type="radio" checked> Goalkeeper</label>
+        <label><input class="inline" name="position" type="radio" value="forward"> Forward</label>
+        <label><input class="inline" name="position" type="radio" value="midfielder"> Midfielder</label>
+        <label><input class="inline" name="position" type="radio" value="defender"> Defender</label>
+        <label><input class="inline" name="position" type="radio" value="not-sure"> Not Sure Yet</label>
       </fieldset>
       
+      <fieldset>
+        <legend>What football skills would you like to improve on?</legend>
+        <label><input class="inline" type="checkbox" value="passing" checked> Passing</label>
+        <label><input class="inline" type="checkbox" value="shooting"> Shooting</label>
+        <label><input class="inline" type="checkbox" value="dribbling"> Dribbling</label>
+        <label><input class="inline" type="checkbox" value="defending"> Defending</label>
+        <label><input class="inline" type="checkbox" value="goalkeeping"> Goalkeeping</label>
+        <label><input class="inline" type="checkbox" value="fitness"> Fitness</label>
+        <label><input class="inline" type="checkbox" value="tactics"> Tactics</label>
+      </fieldset>
+
+      <label>Any Questions?
+        <textarea placeholder="Enter your queries here" rows="5" cols="20"></textarea>
+      </label>
+
+      <input id="submit" type="submit" value="Submit">
     </form>
   </body>
 </html>
