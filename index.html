@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">Football Coaching Survey Form</h1>
+    <p id="description">Please fill this form to help us understand your needs.</p>
+    <form id="survey-form">
+
+      <fieldset>
+        <label id="name-label">Name <input type="text" id="name" placeholder="Enter your Name"></label>
+        <label id="email-label">Email <input type="email" id="email" required placeholder="Enter your Email"></label>
+        <label id="number-label">Age <input type="number" id="number" min="10" max="30" placeholder="Age"></label>
+      </fieldset>
+      
+      <fieldset>
+        <label>Which option best describes your skill level:
+          <select id="dropdown">
+            <option value="">Select one</option>
+            <option value="1">Beginner</option>
+            <option value="2">Intermediate</option>
+            <option value="3">Advanced</option>
+        </label>
+      </fieldset>
+      
+      <fieldset>
+        <legend>What postion do you usually play?</legend>
+        <label><input name="position" type="radio" checked> Goalkeeper</label>
+        <label><input name="position" type="radio"> Forward</label>
+        <label><input name="position" type="radio"> Midfielder</label>
+        <label><input name="position" type="radio"> Defender</label>
+        <label><input name="position" type="radio"> Not Sure Yet</label>
+      </fieldset>
+      
+    </form>
+  </body>
+</html>
